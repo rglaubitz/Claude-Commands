@@ -60,6 +60,28 @@ And Claude handles the rest.
 
 **Output:** Complete task-manager structure with phases, tasks, subtasks, and progress tracking.
 
+**Integration with /execute:**
+
+After /breakdown completes, use `/execute` for systematic implementation:
+
+```bash
+/breakdown IMPLEMENTATION.md project-name  # Creates task-manager/
+# → Outputs: "Ready to start Phase 1? Run: /execute 1"
+
+/execute 1                                  # Implement Phase 1
+# → Auto-detects task-manager/ structure
+# → Reads all task files for Phase 1
+# → Updates progress in task-manager/README.md
+
+# Continue: compact → /execute 2 → compact → /execute 3 → ...
+```
+
+**Seamless workflow:**
+- /breakdown creates structure → /execute implements
+- Auto-detection (no manual setup needed)
+- Progress tracking in task-manager/README.md
+- See: `task-manager/INTEGRATION-GUIDE.md` (auto-generated)
+
 **[Full Documentation →](commands/breakdown.md)**
 
 ---
