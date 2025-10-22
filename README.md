@@ -27,6 +27,43 @@ And Claude handles the rest.
 
 ## 📚 Available Commands
 
+### 🏗️ Implementation Task Breakdown
+
+**Command:** `/breakdown <implementation-file> <project-name>`
+
+**What it does:**
+- **Phase 1: Initialize** - Create directory structure and README skeletons
+- **Phase 2: Extract Tasks** - Analyze implementation guide and create task files (with compacts)
+- **Phase 3: Flow Review** - Validate dependencies and identify gaps
+- **Phase 4: Subtask Breakdown** - Break tasks into 2-4 hour actionable chunks (with compacts)
+- **Phase 5: Master README** - Create navigation and progress tracking
+
+**When to use:**
+- Multi-week implementation projects (4-7 weeks)
+- Large implementation guides (1,000+ lines)
+- Need systematic progress tracking
+- Complex dependency management
+- Team handoffs during long projects
+
+**Quality guarantees:**
+- ✅ Tasks linked to test specifications
+- ✅ Subtasks are 2-4 hour actionable chunks
+- ✅ Dependencies validated (no circular deps)
+- ✅ Gap analysis (error handling, deployment, etc.)
+- ✅ Research integration (ADRs, docs)
+- ✅ Critical path identification
+
+**Example:**
+```bash
+/breakdown IMPLEMENTATION.md ui-ux-enhancements
+```
+
+**Output:** Complete task-manager structure with phases, tasks, subtasks, and progress tracking.
+
+**[Full Documentation →](commands/breakdown.md)**
+
+---
+
 ### 🔬 Research, Document, Finalize (RDF)
 
 **Command:** `/rdf` or `/research-document-finalize`
@@ -95,6 +132,7 @@ That's it! 🎉
 
 | Command | Purpose | Phase | Status |
 |---------|---------|-------|--------|
+| **[Breakdown](/commands/breakdown.md)** | Transform implementation guides into task hierarchies | Planning → Execution | ✅ Stable |
 | **[RDF](/commands/research-document-finalize/)** | Research, Document, Finalize workflow | Research → Implementation | ✅ Stable |
 | *More coming soon...* | | | 🚧 |
 
